@@ -39,7 +39,7 @@ Date: May/June 2018
 *	Press Ctrl+X to exit nano
 *	Type sudo apachectl restart and press enter
 
-### Setting up sequelPro to manage MySQL(Optional)
+### Setting up sequelPro to manage MySQL
 * Open SequelPro
 *	Enter 127.0.0.1 for the Host. Enter root for the Username and newpassword for the Password. Press Connect
 *	From the dropdown on the top left corner select mydb as the desired database
