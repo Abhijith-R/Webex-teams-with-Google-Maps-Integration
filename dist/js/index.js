@@ -1,0 +1,1 @@
+window.ciscospark = require('ciscospark')

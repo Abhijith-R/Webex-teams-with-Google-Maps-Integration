@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cisco Spark</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  <div class="container lg-3">
+    <br>
+    <div style="align-items: flex-start; display: flex; max-width: 100%">
+      <div style="flex: 1 1 auto; width:50%;">
+        <video style="width:100%; border:10px double black;" id="self-view" muted autoplay></video>
+      </div>
+      <div style="flex: 1 1 auto; width:50%" >
+        <audio id="remote-view-audio" autoplay></audio>
+        <video style="width:100%; border:10px double black;" id="remote-view-video" autoplay></video>
+      </div>
+    </div>
+    <br>
+    <div class="d-flex p-3">
+      <form id="call-controls">
+          <button id="hangup" title="hangup" type="button" class="btn btn-warning">Hangup</button>
+          <button type="button" class="btn btn-primary" onclick="window.close();">Close</button>
+
+          <button type="button" class="btn btn-primary" id="stop-sending-audio" title="stop sending audio">Mute audio</button>
+          <button type="button" class="btn btn-primary" id="start-sending-audio" title="start sending audio">Unmute audio</button>
+          <button type="button" class="btn btn-primary" id="stop-sending-video" title="stop sending video">Pause video</button>
+          <button type="button" class="btn btn-primary" id="start-sending-video" title="start sending video">Resume video</button>
+          <br>
+      </form>
+    </div>
+</div>
+
+    <!-- /bundle.js is the bundled CiscoSpark JavaScript SDK -->
+    <script src="/bundle.js"></script>
+    <!-- app.js is your application code -->
+    <script src="../dist/js/app.js"></script>
+  </body>
+</html>
