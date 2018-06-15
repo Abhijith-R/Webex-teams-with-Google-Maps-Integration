@@ -22,7 +22,7 @@ Date: May/June 2018
 * Ensure Xcode and command line tools are installed in you Mac system
 * Refer https://www.embarcadero.com/starthere/xe5/mobdevsetup/ios/en/installing_the_commandline_tools.html to install Xcode and command line tools.
 *	Download the project folder
-*	Open a Terminal and run environment-setup.sh file (sh environment-setup.sh)
+*	Open a Terminal and run <b>environment-setup.sh</b> file (sh environment-setup.sh)
 *	Copy the project folder to the newly created Sites folder (mv project-folder ~/Sites)
 *	Open Terminal and type sudo nano /etc/apache2/httpd.conf and press enter
 *	Press Ctrl+W which will bring up a search
