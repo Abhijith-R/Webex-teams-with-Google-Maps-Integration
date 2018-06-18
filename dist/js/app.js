@@ -33,7 +33,7 @@ function connect() {
         }
       },
       credentials: {
-        access_token: "YTY5ZTk3MzAtMTZiMS00NjJiLWFiZjUtNDY0NTdlM2RmODk5OGM4MmEwMjYtMjRj"
+        access_token: "Your Access Token"
       }
     });
   }
@@ -198,7 +198,7 @@ document.getElementById('stop-sending-video').addEventListener('click', () => {
 
   connect()
     .then(() => {
-      const call = spark.phone.dial("abhr@cisco.com");
+      const call = spark.phone.dial("someone@domain.com");
 
       // Call our helper function for binding events to calls
       bindCallEvents(call);
