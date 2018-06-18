@@ -2,7 +2,6 @@
 // Declare some globals that we'll need throughout
 let activeCall, spark;
 
-
 // There's a few different events that'll let us know we should initialize
 // CiscoSpark and start listening for incoming calls, so we'll wrap a few things
 // up in a function.
@@ -164,6 +163,3 @@ document.getElementById('stop-sending-video').addEventListener('click', () => {
       // Call our helper function for binding events to calls
       bindCallEvents(call);
     });
-  // ignore the catch case since we reported the error above and practical
-  // error handling is out of the scope this sample
-// });
