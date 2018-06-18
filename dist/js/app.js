@@ -2,19 +2,6 @@
 // Declare some globals that we'll need throughout
 let activeCall, spark;
 
-// First, let's wire our form fields up to localStorage so we don't have to
-// retype things everytime we reload the page.
-
-// [
-//   'access-token',
-//   'invitee'
-// ].forEach((id) => {
-//   const el = document.getElementById(id);
-//   el.value = localStorage.getItem(id);
-//   el.addEventListener('change', (event) => {
-//     localStorage.setItem(id, event.target.value);
-//   });
-// });
 
 // There's a few different events that'll let us know we should initialize
 // CiscoSpark and start listening for incoming calls, so we'll wrap a few things
@@ -73,42 +60,16 @@ function connect() {
 
     return spark.phone.register()
       .then(() => {
-        // This is just a little helper for our selenium tests and doesn't
-        // really matter for the example
         document.body.classList.add('listening');
-
-        //document.getElementById('connection-status').innerHTML = 'connected';
       })
-      // This is a terrible way to handle errors, but anything more specific is
-      // going to depend a lot on your app
-      // .catch((err) => {
-      //   console.error(err);
-      //   alert(err.stack);
-      //   // we'll rethrow here since we didn't really *handle* the error, we just
-      //   // reported it
-      //   throw err;
-      // });
 }
 
   return Promise.resolve();
 }
 
-// Similarly, there are a few different ways we'll get a call Object, so let's
-// put call handling inside its own function.
 function bindCallEvents(call) {
   activeCall = call;
 
-  // The stats stream emits a new chunk every 1000ms, so we'll render that into
-  // the UI to show when we are/are not muted.
-  // call.getStatsStream()
-  //   .on('data', (data) => {
-  //     document.getElementById('outgoing-audio-stats').innerHTML = JSON.stringify(data.outgoingAudio, null, 2);
-  //     document.getElementById('outgoing-video-stats').innerHTML = JSON.stringify(data.outgoingVideo, null, 2);
-  //   });
-
-  // call is a call instance, not a promise, so to know if things break,
-  // we'll need to listen for the error event. Again, this is a rather naive
-  // handler.
   call.on('error', (err) => {
     console.error(err);
     alert(err.stack);
