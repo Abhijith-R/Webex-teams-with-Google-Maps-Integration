@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/Abhijith-R/Webex-teams-with-Google-Maps-Integration)
+
 # Fire Department Incident Management
 This Project is an Incident Management Portal for the fire department to handle/manage incidents. This Project also demonstrates the integration between Cisco Webex teams and Google maps API and how it can help in managing fire incidents.
 
